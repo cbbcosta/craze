@@ -1,0 +1,23 @@
+.flex {
+  display: flex;
+}
+
+.flex--desktop {
+  display: block;
+}
+
+.align-end {
+  align-self: flex-end;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+@media only screen and (min-width: 600px) {
+  .flex--desktop {
+    display: flex;
+  }
+}

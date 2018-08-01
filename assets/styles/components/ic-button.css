@@ -1,0 +1,23 @@
+.ic-button {
+  margin-right: 20px;
+}
+
+.ic-button:hover {
+  cursor: pointer;
+}
+
+.ic-button svg .icon {
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+.ic-button:hover svg .icon {
+  fill: rgba(255, 255, 255, 1);
+}
+
+.ic-button svg .circle {
+  fill: rgba(0, 0, 0, 0.6);
+}
+
+.ic-button:hover svg .circle {
+  fill: rgba(0, 0, 0, 1);
+}
