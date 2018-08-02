@@ -1,0 +1,46 @@
+h1 {
+  font-family: $main-title-typeface;
+  text-shadow: 2px 3.464px 0px rgba(0,1,1,0.25);
+  font-weight: normal;
+  @include font-size(52);
+  @include line-height(10);
+
+  @include media($break-m) {
+    @include font-size(72);
+    @include line-height(20);
+  }
+}
+
+h2 {
+  font-family: $secondary-title-typeface;
+  @include font-size(16);
+  @include line-height(24);
+  text-shadow: 2px 3.464px 0px rgba(0,1,1,0.25);
+}
+
+
+h3 {
+  font-family: $subtitle-typeface;
+  @include font-size(30);
+  font-weight: bold;
+  text-align: center;
+  color: rgb(34, 34, 34);
+  @include line-height(18);
+
+  @include media($break-m) {
+    @include font-size(24);
+    @include line-height(36);
+  }
+}
+
+p {
+  @include font-size(13);
+  @include line-height(18);
+  color: rgb(132, 132, 132);
+  text-align: center;
+
+  @include media($break-m) {
+    @include font-size(16);
+    @include line-height(26);
+  }
+}
