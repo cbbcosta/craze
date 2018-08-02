@@ -20,7 +20,7 @@ h2 {
 
 
 h3 {
-  font-family: $subtitle-typeface;
+  font-family: $secondary-title-typeface;
   @include font-size(30);
   font-weight: bold;
   text-align: center;
@@ -33,14 +33,19 @@ h3 {
   }
 }
 
+h4 {
+  font-family: $secondary-title-typeface;
+  @include font-size(20);
+  @include line-height(18);
+}
+
 p {
   @include font-size(13);
   @include line-height(18);
   color: rgb(132, 132, 132);
-  text-align: center;
 
   @include media($break-m) {
-    @include font-size(16);
+    @include font-size(14);
     @include line-height(26);
   }
 }
