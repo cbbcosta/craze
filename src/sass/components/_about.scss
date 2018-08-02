@@ -1,0 +1,30 @@
+.about {
+  background-color: $gray-2;
+
+  h3 {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .flex {
+    justify-content: space-between;
+  }
+}
+
+.about__item {
+  text-align: left;
+
+  @include media($break-m2) {
+    flex-basis: 40%;
+  }
+}
+
+.about__list {
+  .about__list-item {
+    list-style-image: url('../img/icons/ic_arrow.png');
+  }
+}
+
+iframe {
+  width: 100%;
+  border-radius: 15px;
+}
