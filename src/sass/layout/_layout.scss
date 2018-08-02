@@ -1,17 +1,21 @@
 .flex {
   display: flex;
 
-  &.flex--desktop {
+  &.flex--break-m2 {
     display: block;
 
-    @include media($break-m) {
+    @include media($break-m2) {
       display: flex;
     }
   }
-}
 
-.flex--desktop {
-  display: block;
+  &.flex--break-m {
+    display: block;
+
+    @include media($break-m2) {
+      display: flex;
+    }
+  }
 }
 
 .align-end {
