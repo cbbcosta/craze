@@ -19,7 +19,17 @@
 }
 
 .container {
+  padding: 30px 0;
   max-width: 1440px;
   margin: 0 auto;
   width: 80%;
+
+
+  @include media($break-l) {
+    padding-top: 50px 0;
+  }
+
+  &.container--bottom-fixed {
+    padding-bottom: 0;
+  }
 }
