@@ -5,8 +5,14 @@
 body {
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family: $main-typeface;
 }
 
-.oi {
+ul {
+  margin: 0;
 
+  li {
+    list-style: none;
+  }
 }
