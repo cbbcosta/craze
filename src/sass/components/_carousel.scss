@@ -1,0 +1,11 @@
+.carousel {
+
+}
+
+.carousel__item {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
