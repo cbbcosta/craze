@@ -10,19 +10,27 @@
   }
 
   blockquote {
-    @include font-size(24);
+    @include font-size(18);
     color: $gray-3;
     text-align: center;
     font-style: italic;
+
+    @include media($break-m) {
+      @include font-size(24);
+    }
   }
 
   p {
     text-align: center;
     font-family: $secondary-title-typeface;
     color: $black;
-    @include font-size(18);
+    @include font-size(14);
     @include line-height(18);
     font-weight: bold;
+
+    @include media($break-m) {
+      @include font-size(18);
+    }
   }
 }
 

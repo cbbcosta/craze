@@ -3,13 +3,13 @@ footer {
 }
 
 .footer__list {
+  margin-top: 20px;
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
 .footer__item {
-  margin-right: 30px;
   margin-bottom: 30px;
 
   a {
@@ -19,5 +19,9 @@ footer {
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  @include media($break-m2) {
+    margin-right: 30px;
   }
 }

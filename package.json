@@ -17,6 +17,6 @@
     "gulp-sass": "^4.0.1",
     "gulp-yarn": "^2.0.0",
     "gulp-babel": "^7.0.1",
-    "gulp-minify": "^3.1.0",
-  },
+    "gulp-minify": "^3.1.0"
+  }
 }

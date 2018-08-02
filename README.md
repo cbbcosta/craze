@@ -23,4 +23,7 @@ ArcTouch's Front-end Craze Code Challenge
  3. Open your browser at localhost:3000' and check the results
 
 
-## Deploy
+## Screenshots of the results
+
+![alt text](Desktop-version.png)
+![alt text](Mobile-version.png)
