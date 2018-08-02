@@ -1,0 +1,55 @@
+.pricing {
+  background-color: $gray-2;
+
+  .flex {
+    justify-content: space-between;
+  }
+
+  .pricing__plans {
+    transform: translateY(40px);
+  }
+}
+
+.pricing__item {
+  background-color: $white;
+  flex-basis: 24%;
+  text-align: center;
+  box-shadow: 0 0 9px 0 $gray-1;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.pricing__heading {
+  background-color: $light-blue;
+  color: $white;
+  font-weight: bold;
+  @include font-size(28);
+  @include line-height(24);
+  padding: 15px 0;
+}
+
+.pricing__features-wrapper {
+  padding: 20px;
+}
+
+.pricing__feature {
+  padding: 10px;
+  border-bottom: solid 1px $gray-1;
+  color: rgb(132,132,132);
+
+  &.pricing__feature--bolder {
+    color: $black;
+    @include font-size(42);
+    font-weight: bold;
+
+    sup {
+      @include font-size(24);
+    }
+  }
+}
+
+.pricing__footer {
+  background-color: $light-blue;
+}
