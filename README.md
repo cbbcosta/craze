@@ -20,7 +20,7 @@ ArcTouch's Front-end Craze Code Challenge
   gulp
  ```
 
- 3. Open your browser at localhost:3000' and check the results
+ 3. Open your browser at `localhost:3000` and check the results
 
 
 ## Screenshots of the results
