@@ -1,0 +1,42 @@
+// *************************************
+//
+//   Variables
+//   -> Project variables
+//
+// *************************************
+
+// -------------------------------------
+//   Breakpoints
+// -------------------------------------
+
+$break-small: 30em; //480px
+$break-small2: 37.5em; //600px
+$break-medium: 48em; //768px
+$break-medium2: 57.5em; //920px
+$break-large: 64em; //1024px
+$break-xtra-large: 80em; //1280px
+
+$break-s: $break-small;
+$break-s2: $break-small2;
+$break-m: $break-medium;
+$break-m2: $break-medium2;
+$break-l: $break-large;
+$break-xl: $break-xtra-large;
+
+
+// -------------------------------------
+//   Color
+// -------------------------------------
+
+$white: #ffffff;
+$black: #000000;
+
+
+// -------------------------------------
+//   Typography
+// -------------------------------------
+
+$main-typeface: 'Nunito Sans', sans-serif;
+$main-title-typeface: 'Pacifico', cursive;
+$secondary-title-typeface: 'PT Sans', sans-serif;
+$subtitle-typeface: 'Gothic A1', sans-serif;
