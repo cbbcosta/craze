@@ -1,0 +1,10 @@
+.btn {
+  @include font-size(15);
+  @include line-height(18);
+  text-decoration: none;
+  padding: 15px 30px;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: $dark-blue;
+  color: $white;
+}
