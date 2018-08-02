@@ -2,6 +2,22 @@ footer {
   background-color: $gray-2;
 }
 
+.footer__list {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
 .footer__item {
   margin-right: 30px;
+  margin-bottom: 30px;
+
+  a {
+    color: $gray-3;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
