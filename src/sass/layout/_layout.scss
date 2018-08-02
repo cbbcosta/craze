@@ -1,0 +1,25 @@
+.flex {
+  display: flex;
+
+  &.flex--desktop {
+    display: block;
+
+    @include media($break-m) {
+      display: flex;
+    }
+  }
+}
+
+.flex--desktop {
+  display: block;
+}
+
+.align-end {
+  align-self: flex-end;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 80%;
+}
