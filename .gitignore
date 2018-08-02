@@ -5,3 +5,8 @@ yarn-error.log*
 
 # Dependency directories
 node_modules/
+
+# Bundle generated files
+src/css
+src/js/bundle.js
+src/js/bundle-min.js
