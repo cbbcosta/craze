@@ -6,6 +6,7 @@ var plumber = require('gulp-plumber');
 var cleanCSS = require('gulp-clean-css');
 var minify = require('gulp-minify');
 var babel = require('gulp-babel');
+var browserSync = require('browser-sync').create();
 
 var paths = {
   styles: [
@@ -38,24 +39,33 @@ gulp.task('styles', function () {
 
 gulp.task('pack-js', function () {
   return gulp.src([
-    'src/js/utils/*.js',
-    'src/js/constants/*.js',
-    'src/js/main.js',
-    'src/js/components/*.js',
-    'src/js/pages/*.js'
+    // 'src/js/main.js',
+    'src/js/components/*.js'
   ])
   .pipe(concat('bundle.js'))
   .pipe(babel())
   .pipe(minify())
-  .pipe(gulp.dest('src/js/'));
+  .pipe(gulp.dest('src/js/'))
+  .pipe(browserSync.reload({
+    stream: true
+  }))
 });
 
 gulp.task('watch', [
   'styles',
   'pack-js'
 ], function () {
+  gulp.watch('src/*.html', browserSync.reload);
   gulp.watch(paths.styles, ['styles']);
   gulp.watch(paths.js, ['pack-js']);
 });
 
-gulp.task('default', ['watch']);
+gulp.task('serve', function() {
+  browserSync.init({
+    server: {
+      baseDir: 'src'
+    },
+  })
+})
+
+gulp.task('default', ['serve', 'watch']);
