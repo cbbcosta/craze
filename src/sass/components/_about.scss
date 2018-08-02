@@ -20,8 +20,11 @@
 }
 
 .about__list {
+  @include font-size(14);
+
   .about__list-item {
     list-style-image: url('../img/icons/ic_arrow.png');
+    margin-bottom: 14px;
   }
 }
 
