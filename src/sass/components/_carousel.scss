@@ -1,13 +1,18 @@
 .carousel {
+  min-height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel__stage {
+  width: 300%;
+  position: absolute;
+  display: flex;
 
 }
 
 .carousel__item {
-  display: none;
-
-  &.active {
-    display: block;
-  }
+  width: 100%;
 
   blockquote {
     @include font-size(18);

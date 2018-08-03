@@ -1,48 +1,51 @@
-let slideIndex = 1;
+const dots = document.getElementsByClassName('js-dot');
+let timerId = 0;
 
-const currentSlide = index => {
-  showSlides(slideIndex = index);
-  autoPlaySlides(false)
-
-}
-
-const showSlides = index => {
-  var i;
-  var slides = document.getElementsByClassName('js-carousel-item');
-  var dots = document.getElementsByClassName('dot');
-  if (index > slides.length) {
-    slideIndex = 1
-  }
-  if (index < 1) {
-    slideIndex = slides.length
-  }
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = 'none';
-  }
+const removeActiveClass = () => {
   for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(' active', '');
+    dots[i].className = 'dot js-dot'
   }
-
-  slides[slideIndex-1].style.display = 'block';
-  dots[slideIndex-1].className += ' active';
 }
 
-const autoPlaySlides = play => {
-    var i;
-    var slides = document.getElementsByClassName('js-carousel-item');
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    console.log(slideIndex);
-    if (slideIndex > slides.length) {
-      slideIndex = 1
-    }
-    slides[slideIndex-1].style.display = "block";
-    if(play) {
-      setTimeout(autoPlaySlides(true), 4000);
-    }
+const nextSlide = slideIndex => {
+  let newIndex = slideIndex;
+
+  if (slideIndex > 2) {
+    newIndex = 0;
+  }
+  const slide = document.getElementsByClassName('js-carousel-item')[newIndex]
+  const slidePosition = slide.offsetWidth * newIndex * -1
+  const stage = document.getElementsByClassName('carousel__stage')[0]
+
+  stage.style.left = slidePosition + 'px';
+  timerId = setInterval(function() {nextSlide(newIndex + 1)}, 4000)
 }
 
-showSlides(slideIndex)
-// autoPlaySlides(true)
+
+const stopInterval = () => {
+  console.log(timerId)
+  console.log('oi')
+  clearInterval(timerId);
+}
+
+const slideOnClick = () => {
+  for (i = 0; i < dots.length; i++) {
+    const dot = dots[i]
+
+    dot.addEventListener('click', () => {
+      const index = parseInt(dot.dataset.index)
+      const slide = document.getElementsByClassName('js-carousel-item')[index]
+      const slidePosition = slide.offsetWidth * parseInt(slide.dataset.index) * -1
+      const stage = document.getElementsByClassName('carousel__stage')[0]
+
+      // Stops carousel autoplay
+      stopInterval()
+      removeActiveClass()
+      dot.classList.add('active')
+      stage.style.left = slidePosition + 'px';
+    })
+  }
+}
+
+slideOnClick()
+nextSlide(0)
