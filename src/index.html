@@ -123,23 +123,25 @@
   <!-- testimonials -->
   <section class="overflow text-center">
     <div class="carousel js-carousel flex">
-      <div class="carousel__item  js-carousel-item active container">
-        <blockquote>"Loved it! Used it many times. Getting better and making life easier."</blockquote>
-        <p>Sarah Hunt</p>
-      </div>
-      <div class="carousel__item js-carousel-item container">
-        <blockquote>"I'm very happy with what I've seen so far and would highly recommend this design, both for ux/ui designers to be inspired and for developers who are looking for inpisiration on UI development"</blockquote>
-        <p>Nicholas Collins</p>
-      </div>
-      <div class="carousel__item js-carousel-item container">
-        <blockquote>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</blockquote>
-        <p>Preston Smith</p>
+      <div class="carousel__stage">
+        <div class="carousel__item  js-carousel-item active container" data-index=0>
+          <blockquote>"Loved it! Used it many times. Getting better and making life easier."</blockquote>
+          <p>Sarah Hunt</p>
+        </div>
+        <div class="carousel__item js-carousel-item container" data-index=1>
+          <blockquote>"I'm very happy with what I've seen so far and would highly recommend this design, both for ux/ui designers to be inspired and for developers who are looking for inpisiration on UI development"</blockquote>
+          <p>Nicholas Collins</p>
+        </div>
+        <div class="carousel__item js-carousel-item container" data-index=2>
+          <blockquote>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</blockquote>
+          <p>Preston Smith</p>
+        </div>
       </div>
     </div>
     <div class="carousel__dots container">
-      <div class="dot active" onclick="currentSlide(1)"></div>
-      <div class="dot" onclick="currentSlide(2)"></div>
-      <div class="dot" onclick="currentSlide(3)"></div>
+      <div class="dot js-dot active" data-index=0></div>
+      <div class="dot js-dot" data-index=1></div>
+      <div class="dot js-dot" data-index=2></div>
     </div>
   </section>
 
